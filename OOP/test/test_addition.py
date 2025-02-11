@@ -1,8 +1,6 @@
 from app.addition import add
 
 def test_addition():
-    result = add( 2, 2)
-    if result == 4:
-       pass
-    result = add(2,2)
-    assert result ==4
+    assert add(2, 2) == 4
+    assert add(-1, 1) == 0
+    assert add(0, 0) == 0
