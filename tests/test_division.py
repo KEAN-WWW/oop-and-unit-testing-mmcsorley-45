@@ -1,12 +1,13 @@
-from app.division import divide
+"""Unit tests for the division function."""
 import pytest
-def test_division():
-    assert divide(10,2)== 5;
-    assert divide(6,2)==3;
+from app.division import divide
 
-    pass
+def test_division():
+    """Test that divide() correctly divides two numbers."""
+    assert divide(10,2)== 5
+    assert divide(6,2)==3
 
 def test_divide_zero_exception():
+    """Test 0 output"""
     with pytest.raises(ZeroDivisionError):
         assert divide(4,0)==0
-        pass
